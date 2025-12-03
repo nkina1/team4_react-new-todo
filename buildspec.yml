@@ -17,4 +17,10 @@ post_build:
   commands:
     - echo build Docker image complete `date`
     - echo push latest Docker images to ECR...
+    - echo Writing image definitions file...
     - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/team-4-ecr-repo:latest
+    - printf '[{"name":"<container name>","imageUri":"<ECR repository URI>:latest"}]' > imagedefinitions.json
+artifacts:
+files: imagedefinitions.json
+
+  
