@@ -21,6 +21,6 @@ post_build:
     - echo Writing image definitions file...
     - printf '[{"name":"team-4-cluster","imageUri":"962804699607.dkr.ecr.us-west-2.amazonaws.com/team-4-ecr-repo:latest"}]' > imagedefinitions.json
 artifacts:
-  files: imagedefinitions.json
+  files: src/imagedefinitions.json
 
   
